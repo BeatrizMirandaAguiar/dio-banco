@@ -1,6 +1,5 @@
 package conta;
 
-import cartao.Cartao;
 import user.Cliente;
 
 public class ContaCorrente extends Conta{
@@ -47,7 +46,6 @@ public class ContaCorrente extends Conta{
 				if(valor > (saldo + limite)) {
 					System.out.println("Valor superior ao saldo e ao limite!");
 				} else {
-					double temp = valor - saldo;
 					this.limite -= valor - saldo;
 					saldo -= valor;
 					contaDestino.depositar(valor);
@@ -58,7 +56,7 @@ public class ContaCorrente extends Conta{
 			} else {System.out.println("Saldo insuficiente para transferência!\n Contate sua agência caso deseje a opção de crédito.");}
 		} else {
 			this.saldo -= valor;
-			operacao = ("\nConta:"+numeroConta+"\nTrasferência: "+valor+"\nSaldo: "+saldo);
+			operacao = ("\nConta:"+numeroConta+"\nTrasferência: "+valor+"\nSaldo: "+this.saldo);
 			operacaoDestino = ("\nConta:"+contaDestino.numeroConta+"\nTransferência: "+valor+"\nSaldo: -"+contaDestino.saldo);
 		}
 		registroExtrato.add(operacao);

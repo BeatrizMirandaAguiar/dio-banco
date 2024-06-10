@@ -1,6 +1,5 @@
 package conta;
 
-import cartao.Cartao;
 import user.Cliente;
 
 public class ContaPoupanca extends Conta{

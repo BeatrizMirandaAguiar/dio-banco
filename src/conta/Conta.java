@@ -3,9 +3,6 @@ import java.util.List;
 import java.util.Scanner;
 import user.Cliente;
 import cartao.Cartao;
-import cartao.Credito;
-import cartao.Debito;
-import cartao.Multiplo;
 
 public class Conta {
 	private static int AGENCIA_PADRAO = 18,  BANCO_PADRAO = 2606, SEQUENCIAL = 1;
